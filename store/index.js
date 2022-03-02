@@ -7,13 +7,13 @@ export const state = () => ({
 })
 
 export const getters = {
-  getTest: state => {
+  getTest: (state) => {
     return state.test
   },
-  getStarters: state => {
+  getStarters: (state) => {
     return state.starters + ' -- from index.js'
   },
-  getCookies: state => {
+  getCookies: (state) => {
     return state.allowCookies
   },
 }
@@ -37,10 +37,11 @@ export const mutations = {
 export const actions = {
   async nuxtServerInit(store, context) {
     try {
-      // let url = 'https://bangkokpavilion.co.uk/'
-      const response = await context.$axios.get('assets/all_main_menus.json')
-      store.commit('set_soups', response.data)
-      store.commit('set_starters', response.data)
+      let url = 'https://bangkokpavilion.co.uk/'
+      // const response = await context.$axios.get('assets/all_main_menus.json')
+      // store.commit('set_soups', response.data)
+      // store.commit('set_starters', response.data)
+      // console.log('test')
     } catch (error) {}
   },
 }

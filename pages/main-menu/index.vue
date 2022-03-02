@@ -7,52 +7,52 @@
 
       <table4Col1price
         title="Soups"
-        :menus="all_menus.filter(menu => menu.category == 'soups')"
+        :menus="all_menus.filter((menu) => menu.category == 'soups')"
       />
 
       <table4Col1price
         title="Chicken and Duck"
-        :menus="all_menus.filter(menu => menu.category == 'chicken_duck')"
+        :menus="all_menus.filter((menu) => menu.category == 'chicken_duck')"
       />
 
       <table4Col1price
         title="Pork"
-        :menus="all_menus.filter(menu => menu.category == 'pork')"
+        :menus="all_menus.filter((menu) => menu.category == 'pork')"
       />
 
       <table4Col1price
         title="Beef"
-        :menus="all_menus.filter(menu => menu.category == 'beef')"
+        :menus="all_menus.filter((menu) => menu.category == 'beef')"
       />
 
       <table4Col1price
         title="Seafood"
-        :menus="all_menus.filter(menu => menu.category == 'seafood')"
+        :menus="all_menus.filter((menu) => menu.category == 'seafood')"
       />
 
       <table4Col1price
         title="Curry"
-        :menus="all_menus.filter(menu => menu.category == 'curry')"
+        :menus="all_menus.filter((menu) => menu.category == 'curry')"
       />
 
       <table4Col1price
         title="Salad"
-        :menus="all_menus.filter(menu => menu.category == 'salad')"
+        :menus="all_menus.filter((menu) => menu.category == 'salad')"
       />
 
       <table4Col1price
         title="Vegetables"
-        :menus="all_menus.filter(menu => menu.category == 'vegetables')"
+        :menus="all_menus.filter((menu) => menu.category == 'vegetables')"
       />
 
       <table4Col1price
         title="Rice"
-        :menus="all_menus.filter(menu => menu.category == 'rice')"
+        :menus="all_menus.filter((menu) => menu.category == 'rice')"
       />
 
       <table4Col1price
         title="Noodles"
-        :menus="all_menus.filter(menu => menu.category == 'noodles')"
+        :menus="all_menus.filter((menu) => menu.category == 'noodles')"
       />
       <div class="hot"><i>*</i> Mild, <i>**</i> Medium, <i>***</i> Hot</div>
       <div class="change">ALL PRICES ARE SUBJECT TO CHANGE</div>
@@ -96,18 +96,18 @@ export default {
   },
   computed: {
     getStarters() {
-      return this.all_menus.filter(m => m.category == 'starters')
+      return this.all_menus.filter((m) => m.category == 'starters')
     },
   },
   asyncData(context) {
     // let url = 'https://bangkokpavilion.co.uk/'
     return context.$axios
       .get('all_menus?menu=main')
-      .then(res => {
+      .then((res) => {
         // console.log(res.data)
         return { all_menus: res.data }
       })
-      .catch(error => {
+      .catch((error) => {
         context.error({
           message: 'ajax problem', // if custom error set
         })
