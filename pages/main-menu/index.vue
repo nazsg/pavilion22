@@ -1,9 +1,10 @@
 <template>
   <div class="main-menu">
     <div class="page_container">
-      <!-- {{ all_menus.filter(m=> m.category == 'soups') }} -->
-
-      <table4Col1price title="Starters" :menus="getStarters" />
+      <table4Col1price
+        title="Starters"
+        :menus="all_menus.filter((menu) => menu.category == 'starters')"
+      />
 
       <table4Col1price
         title="Soups"
@@ -18,6 +19,11 @@
       <table4Col1price
         title="Pork"
         :menus="all_menus.filter((menu) => menu.category == 'pork')"
+      />
+
+      <table4Col1price
+        title="Pork Ribs"
+        :menus="all_menus.filter((menu) => menu.category == 'pork_ribs')"
       />
 
       <table4Col1price
@@ -56,7 +62,6 @@
       />
       <div class="hot"><i>*</i> Mild, <i>**</i> Medium, <i>***</i> Hot</div>
       <div class="change">ALL PRICES ARE SUBJECT TO CHANGE</div>
-      <!-- {{all_menus}} -->
     </div>
   </div>
 </template>
@@ -77,30 +82,7 @@ export default {
       },
     ],
   },
-  data() {
-    return {
-      cats: [
-        'starters',
-        'soups',
-        'chicken_duck',
-        'pork',
-        'beef',
-        'seafood',
-        'curry',
-        'salad',
-        'vegetables',
-        'rice',
-        'noodles',
-      ],
-    }
-  },
-  computed: {
-    getStarters() {
-      return this.all_menus.filter((m) => m.category == 'starters')
-    },
-  },
   asyncData(context) {
-    // let url = 'https://bangkokpavilion.co.uk/'
     return context.$axios
       .get('all_menus?menu=main')
       .then((res) => {
