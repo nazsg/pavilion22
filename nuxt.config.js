@@ -1,6 +1,6 @@
 export default {
   target: 'static',
-  
+
   /*
    ** Headers of the page
    */
@@ -21,7 +21,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',
+        href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CMaterial+Icons',
       },
       {
         rel: 'stylesheet',

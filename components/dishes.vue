@@ -1,6 +1,6 @@
 <template>
   <div class="dishes">
-    <div class="images" >
+    <div class="images">
       <img class="imgShow" src="/dish01.jpg" alt />
       <img class="imgShow" src="/dish02.jpg" alt />
       <img class="imgHide imgShow" src="/dish03.jpg" alt />
@@ -10,9 +10,8 @@
 </template>
 
 <style lang="scss" scoped>
-
 .dishes {
-  background-color: none;
+  background: none;
 }
 .images {
   display: flex;
