@@ -22,8 +22,8 @@
 
       <aside class itemscope itemtype="http://schema.org/LocalBusiness">
         <!-- <time itemprop="openingHours" datetime="Tu-Su 17:30-23:00" -->
-        <time itemprop="openingHours" datetime="Tu,We,Th,Fr,Sa,Su 17:30-23:00"
-          >17:30-23:00 Tuesdays to Sundays</time
+        <span itemprop="openingHours" content="Tu,We,Th,Fr,Sa,Su 17:30-23:00"
+          >17:30-23:00 Tuesdays to Sundays</span
         >
         <div>Closed on Mondays</div>
       </aside>
