@@ -5,6 +5,9 @@ export default {
    ** Headers of the page
    */
   head: {
+    htmlAttrs: {
+      lang: 'en',
+    },
     title:
       process.env.npm_package_name ||
       'Bangkok Pavilion | Thai restaurant in Deal, Kent',
