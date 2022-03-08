@@ -70,6 +70,6 @@ export default {
     extend(config, ctx) {},
   },
   router: {
-    // base: '/pav/',
+    base: '/pav/',
   },
 }

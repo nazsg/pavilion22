@@ -259,6 +259,13 @@ address {
   width: 320px;
   text-align: center;
 }
-
+#quandoo-booking-widget {
+  div {
+    overflow: auto;
+    iframe {
+      border: none;
+    }
+  }
+}
 @import './default/footer';
 </style>
