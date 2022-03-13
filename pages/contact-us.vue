@@ -6,16 +6,17 @@
     </div>
     <form v-else>
       <div class="group g1">
-        <label for="">Name</label> <input type="text" v-model="info.name" />
+        <label for="name">Name</label>
+        <input type="text" v-model="info.name" id="name" />
       </div>
       <div class="group g1">
-        <label for="">Email</label> <input type="text" v-model="info.email" />
+        <label for="email">Email</label>
+        <input type="text" v-model="info.email" id="email" />
       </div>
       <div class="group g2">
-        <label for="">Message</label>
+        <label for="message">Message</label>
         <textarea
-          name=""
-          id=""
+          id="message"
           cols="30"
           rows="10"
           v-model="info.message"
@@ -50,7 +51,6 @@ export default {
   head: {
     title: 'Contact Us | Bangkok Pavilion',
     meta: [
-      { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
