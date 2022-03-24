@@ -34,18 +34,28 @@ export default {
       },
     ],
   },
-  asyncData(context) {
-    return context.$axios
-      .get('all_menus?menu=set_and_lunch')
-      .then((res) => {
-        return { all_menus: res.data }
-      })
-      .catch((error) => {
-        context.error({
-          message: 'ajax problem', // if custom error set
-        })
-        // context.redirect('/')
-      })
+  data() {
+    return {
+      all_menus: [],
+    }
   },
+  created() {
+    this.$axios.get('all_menus?menu=set_and_lunch').then((res) => {
+      this.all_menus = res.data
+    })
+  }, // TABLE:
+  // asyncData(context) {
+  //   return context.$axios
+  //     .get('all_menus?menu=set_and_lunch')
+  //     .then((res) => {
+  //       return { all_menus: res.data }
+  //     })
+  //     .catch((error) => {
+  //       context.error({
+  //         message: 'ajax problem', // if custom error set
+  //       })
+  //       // context.redirect('/')
+  //     })
+  // },
 }
 </script>

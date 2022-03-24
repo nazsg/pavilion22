@@ -56,18 +56,15 @@ export default {
       },
     ],
   },
-  asyncData(context) {
-    return context.$axios
-      .get('all_menus?menu=drinks')
-      .then((res) => {
-        return { drinks: res.data }
-      })
-      .catch((error) => {
-        context.error({
-          message: 'ajax problem', // if custom error set
-        })
-        // context.redirect('/')
-      })
+  data() {
+    return {
+      drinks: [],
+    }
   },
+  created() {
+    this.$axios.get('all_menus?menu=drinks').then((res) => {
+      this.drinks = res.data
+    })
+  }, // TABLE:
 }
 </script>
