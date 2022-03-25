@@ -51,6 +51,12 @@ export default {
   /*
    ** Nuxt.js modules
    */
+  components: [
+    {
+      path: '~/components', // will get any components nested in let's say /components/test too
+      pathPrefix: false,
+    },
+  ],
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
