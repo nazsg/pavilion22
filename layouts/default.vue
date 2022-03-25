@@ -256,7 +256,6 @@ address {
   color: rgb(7, 6, 6);
   background-color: #e69f9f;
   padding: 5px 0;
-  width: 320px;
   text-align: center;
 }
 #quandoo-booking-widget {
