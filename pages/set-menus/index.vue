@@ -16,7 +16,7 @@
         title="Set Menu"
         :menus="all_menus.filter((m) => m.category == 'set_menu')"
       />
-      <div class="change">ALL PRICES ARE SUBJECT TO CHANGE</div>
+      <our-clause />
     </div>
   </div>
 </template>

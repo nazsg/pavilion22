@@ -37,7 +37,7 @@
         title="mineral water"
         :menus="drinks.filter((m) => m.category == 'water')"
       />
-      <div class="change">ALL PRICES ARE SUBJECT TO CHANGE</div>
+      <our-clause />
     </div>
   </div>
 </template>

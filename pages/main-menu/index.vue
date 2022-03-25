@@ -61,7 +61,7 @@
         :menus="all_menus.filter((menu) => menu.category == 'noodles')"
       />
       <div class="hot"><i>*</i> Mild, <i>**</i> Medium, <i>***</i> Hot</div>
-      <div class="change">ALL PRICES ARE SUBJECT TO CHANGE</div>
+      <our-clause />
     </div>
   </div>
 </template>
