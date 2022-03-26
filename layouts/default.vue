@@ -24,7 +24,7 @@ export default {
   watch: {
     $route(to, from) {
       this.bg = this.$route.path.replace('/', '')
-      this.visibility = this.$route.path == '/contact-us' ? 'hide' : 'show'
+      this.visibility = this.$route.path === '/contact-us' ? 'hide' : 'show'
     },
   },
 }
