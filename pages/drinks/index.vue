@@ -44,6 +44,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      drinks: [],
+    }
+  },
   head: {
     title: 'Drinks Menu | Bangkok Pavilion',
     meta: [
@@ -55,11 +60,6 @@ export default {
           'Drinks Menu, wines, Monsoon Valley White (Chenin Blanc & Colombard), Shiraz Rose, Monsoon Valley, aperitifs, brandy, ports, liqueurs, spirits, lager, soft drinks, mineral water',
       },
     ],
-  },
-  data() {
-    return {
-      drinks: [],
-    }
   },
   created() {
     this.$axios.get('all_menus?menu=drinks').then((res) => {
