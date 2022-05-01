@@ -142,8 +142,7 @@ footer {
 main {
   width: 100%;
   margin: 0 auto;
-  p.intro,
-  h1 {
+  p.intro {
     font-size: 1.2rem;
   }
   a {

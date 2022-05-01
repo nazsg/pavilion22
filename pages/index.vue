@@ -2,7 +2,7 @@
   <div class="home">
     <div class="page_container">
       <main>
-        <h1>Authentic Thai Cuisin</h1>
+        <h1>Authentic Thai Cuisine</h1>
         <p class="intro">
           Thailand, the land of smiles and its unique cuisine is the Buddhist
           land in South East Asia, the country which is formerly known as Siam
