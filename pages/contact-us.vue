@@ -7,17 +7,11 @@
     <form v-else>
       <div class="group g1">
         <label for="name">Name</label>
-        <input 
-        id="name" />
-        v-model="info.name" 
-        type="text" 
+        <input id="name" v-model="info.name" type="text" />
       </div>
       <div class="group g1">
         <label for="email">Email</label>
-        <input 
-        id="email" />
-        v-model="info.email" 
-        type="text" 
+        <input id="email" v-model="info.email" type="text" />
       </div>
       <div class="group g2">
         <label for="message">Message</label>
