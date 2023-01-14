@@ -5,10 +5,13 @@
       <div class="cookies" :class="{ consent }">
         <p>
           Our website uses cookies<br /><br />
-          Bangkok Pavilion uses cookies to improve user experience. We also show safe,
-          secure and non personal advertising to support this site. By using our website
-          you consent to our cookies in accordance with our Cookie Policy.<br /><br />
-          <button v-if="!consent" @click="allow">Continue</button>
+          Bangkok Pavilion uses cookies to improve user experience. We also show
+          safe, secure and non personal advertising to support this site. By
+          using our website you consent to our cookies in accordance with our
+          Cookie Policy.
+          <button v-if="!consent" class="cookie">
+            @click="allow" Continue
+          </button>
         </p>
       </div>
       <div>
@@ -32,24 +35,24 @@
   </div>
 </template>
 <script>
-import Face from 'vue-material-design-icons/Facebook.vue'
-import dishes from '../components/dishes'
+// import Face from 'vue-material-design-icons/Facebook.vue'
+// import dishes from '../components/dishes'
 import phoneIcon from 'vue-material-design-icons/PhoneInTalk.vue'
 export default {
-  components: { phoneIcon, dishes, Face },
+  components: { phoneIcon },
   data() {
     return {
       consent: true,
     }
+  },
+  mounted() {
+    if (!localStorage.getItem('allowCookies')) this.consent = false
   },
   methods: {
     allow() {
       this.consent = true
       this.$store.commit('setCookies', true)
     },
-  },
-  mounted() {
-    if (!localStorage.getItem('allowCookies')) this.consent = false
   },
 }
 </script>

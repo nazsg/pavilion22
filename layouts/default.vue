@@ -12,7 +12,7 @@
 <script>
 import dishes from '../components/dishes'
 import appHeader from '@/components/header'
-import appFooter from '@/components/footer'
+import appFooter from '@/components/my-footer'
 export default {
   components: { appHeader, appFooter, dishes },
   data() {
@@ -265,5 +265,6 @@ address {
     }
   }
 }
+
 @import './default/footer';
 </style>
