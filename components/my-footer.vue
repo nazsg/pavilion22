@@ -9,8 +9,8 @@
           safe, secure and non personal advertising to support this site. By
           using our website you consent to our cookies in accordance with our
           Cookie Policy.
-          <button v-if="!consent" class="cookie">
-            @click="allow" Continue
+          <button v-if="!consent" class="cookie" @click="allow">
+            Continue
           </button>
         </p>
       </div>
