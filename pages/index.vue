@@ -27,10 +27,10 @@
         >
         <div>Closed on Mondays</div>
       </aside>
-      <div align="center">
+      <div align="center" class="widgetContainer">
         <iframe
           src="https://svtables.com/widget/?rest_id=403"
-          style="width: 450px; height: 700px"
+          style="width: 100%; height: 700px"
         ></iframe>
       </div>
     </div>

@@ -104,9 +104,16 @@ footer {
 }
 
 .page_container {
-  width: 95%;
+  // width: 95%;
   padding-top: 20px;
   margin: 0 auto;
+  .widgetContainer {
+    width: 100%;
+    @media (min-width: 480px) {
+      width: 450px;
+      margin: 0 auto;
+    }
+  }
   @media (min-width: 900px) {
     max-width: 900px;
     margin: 0 auto;
